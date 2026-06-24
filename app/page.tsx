@@ -25,7 +25,7 @@ import { projects } from "@/data/projects";
 
 const FEATURED_ON_HOME = [
   "delhivery-network-intelligence",
-  "spotify-pochimu",
+  "dynamic-tariff-optimization",
   "cir-yield-curve-modeling",
 ];
 
@@ -36,7 +36,6 @@ const featured: FeaturedProjectData[] = FEATURED_ON_HOME.map((slug) => {
     domain: `${p.domain} · ${p.subdomain.split(",")[0].trim()}`,
     question: p.businessQuestion ?? p.summary,
     description: p.summary,
-    artifactSrc: p.artifactSrc!,
     artifactAlt: p.artifactAlt ?? `${p.title} artifact`,
     metrics: p.metrics ?? [{ value: p.stat.value, label: p.stat.label }],
   };

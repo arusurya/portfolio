@@ -87,12 +87,12 @@ const RADIUS: Record<Importance, number> = {
 };
 
 const DOMAIN_COLOR: Record<string, string> = {
-  Analytics:    "var(--color-amber)",
-  Finance:      "var(--color-coral)",
-  Product:      "var(--color-amber-soft)",
-  Strategy:     "var(--color-coral)",
-  Consulting:   "var(--color-amber)",
-  "Case Study": "var(--color-muted)",
+  Analytics:  "#D4A03A",
+  Finance:    "#D97757",
+  Product:    "#4F9CF9",
+  Strategy:   "#A78BFA",
+  Consulting: "#34D399",
+  "Case Study": "#B0B7C3",
 };
 
 // Default preview: Smart Campus (a flagship with real public metrics)

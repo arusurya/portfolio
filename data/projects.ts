@@ -7,7 +7,6 @@ domain: string;
 subdomain: string;
 mode: "Solo" | "Team";
 verifiedBy: string;
-artifactSrc?: string;
 artifactAlt?: string;
 metrics?: { value: string; label: string }[];
 whatsNext?: string;
@@ -26,7 +25,9 @@ links: {
 github?: string;
 deck?: string;
 demo?: string;
+dashboard?: string;
 report?: string;
+colab?: string;
 certificate?: string;
 submission?: string;
 };
@@ -44,7 +45,7 @@ export const projects: Project[] = [
     subdomain: "Supply Chain Analytics, Graph ML",
     mode: "Team",
     verifiedBy: "Consulting & Analytics Club, IIT Guwahati",
-    artifactSrc: "/projects/delhivery/fig_graph_network.png",
+    
     artifactAlt:
       "Network graph of 1,601 Delhivery hubs, sized by load and colored by delay severity, with the top bottleneck hub highlighted",
     metrics: [
@@ -78,7 +79,9 @@ export const projects: Project[] = [
     keyInsight:
       "Network structure explained delivery delays better than route distance alone. Graph embeddings and centrality metrics uncovered bottleneck hubs and 20+ critical delay corridors that traditional ETA systems could not identify.",    
     tools: ["Python", "NetworkX", "Node2Vec", "GraphSAGE", "XGBoost", "LightGBM", "Streamlit"],
-    links: { github: "https://github.com/arusurya/Optimizing-Delivery-ETAs-with-Graph-Based-Network-Intelligence" },
+    links: { github: "https://github.com/arusurya/Optimizing-Delivery-ETAs-with-Graph-Based-Network-Intelligence",
+             report: "https://drive.google.com/file/d/1_yZI9c_DHS7goylv0vo-mycfELE58t42/view?usp=sharing",
+             dashboard: "https://delhiverynetworkintelligence.streamlit.app/" },
     tagline:
       "Graph-based logistics intelligence platform analyzing 143K+ shipments across 1,601 hubs using Node2Vec/GraphSAGE embeddings to improve ETA prediction and uncover ₹2.45 Cr in operational risk.",
   },
@@ -89,7 +92,7 @@ export const projects: Project[] = [
     subdomain: "AI, ML, Pricing Strategy",
     mode: "Solo",
     verifiedBy: "SocBiz, IIT Roorkee (OP'26)",
-    artifactSrc: "/projects/tariff-optimization/agent-architecture.png",
+    
     artifactAlt:
       "Architecture diagram of the three-agent dynamic tariff system: forecasting, pricing, and learning agents",
     metrics: [
@@ -124,8 +127,8 @@ export const projects: Project[] = [
       "Pricing acted as a coordination mechanism rather than a revenue lever. Small tariff adjustments successfully shifted demand toward underutilized periods while preserving revenue performance.",
     tools: ["Python", "Gradient Boosting", "Pandas", "Feature Engineering"],
     links: { 
-      demo: "#",
-      report: "#",
+      colab: "https://colab.research.google.com/drive/1IdP4D59fHsduGqeJwJhZQ_NbdxNSwkfI?usp=sharing",
+      deck: "https://drive.google.com/file/d/1Yps9IZ6iaNAjLQFlkEjNrwJYBjAGchHX/view?usp=sharing",
     }, 
     tagline:
       "Agentic AI pricing platform that forecasted EV charging demand, dynamically optimized tariffs, reduced congestion, and maintained 99.72% revenue retention through adaptive decision-making.",
@@ -137,7 +140,7 @@ export const projects: Project[] = [
     subdomain: "Customer Analytics, BI",
     mode: "Team",
     verifiedBy: "Consulting & Analytics Club, IIT Guwahati",
-    artifactSrc: "/projects/airline-loyalty/05_shap_waterfall_highrisk.png",
+    
     artifactAlt:
       "SHAP waterfall plot explaining the churn risk score for a high-risk loyalty member",
     metrics: [
@@ -162,7 +165,7 @@ export const projects: Project[] = [
       "Behavioral CLV let the airline distinguish high-value at-risk members from low-value ones for resourcing",
       "SHAP outputs improved business-team trust and adoption of the risk scores",
     ],
-        businessQuestion:
+    businessQuestion:
       "Which loyalty members are most likely to churn, and how should airlines prioritize retention efforts toward customers with the highest future value?",
 
     whyItMatters:
@@ -171,7 +174,9 @@ export const projects: Project[] = [
     keyInsight:
       "Churn prediction became significantly more actionable when combined with Behavioral CLV and SHAP explainability, revealing not only who was at risk but why they were at risk and how valuable they were to retain.",
     tools: ["Python", "XGBoost", "LightGBM", "SHAP", "Streamlit"],
-    links: { github: "#", report: "#" },
+    links: { github: "https://github.com/arusurya/summer_project_iitg", 
+             dashboard: "https://airlineloyaltyprediction.streamlit.app"
+    },
     tagline:
       "AI-powered loyalty intelligence platform combining churn prediction, Behavioral CLV modeling, SHAP explainability, and automated retention recommendations to identify high-value at-risk customers.",
   },
@@ -182,7 +187,7 @@ export const projects: Project[] = [
     subdomain: "Forecasting, BI, Operations",
     mode: "Team",
     verifiedBy: "Shrishti, IIT Roorkee (Tech GC)",
-    artifactSrc: "/projects/smart-campus/smart-campus-anomaly-chart.png",
+    
     artifactAlt:
       "Anomaly detection chart flagging unexpected attendance spikes and drops in campus mess hall usage",
     metrics: [
@@ -216,7 +221,10 @@ export const projects: Project[] = [
     keyInsight:
       "Combining forecasting with anomaly detection transformed attendance records into an operational intelligence layer, allowing administrators to act before disruption occurred rather than after.",
     tools: ["Python", "Isolation Forest", "Streamlit", "Time Series Forecasting"],
-    links: { github: "#", report: "#" },
+    links: { github: "https://github.com/arusurya/Shristhi",
+             dashboard: "https://shristhi-rkcn3oudpxwfstuafbbgrv.streamlit.app",
+             report: "https://drive.google.com/file/d/1h64mOMJaqxXAmoudYI0_WWKARkPSpcct/view?usp=sharing"
+    },
     tagline:
       "Award-winning campus intelligence platform that analyzed 113K+ operational records, forecasted demand, detected anomalies via Isolation Forest, and generated actionable recommendations — 3rd place among 30+ teams.",
   },
@@ -246,7 +254,9 @@ export const projects: Project[] = [
       "Early Warning System flagged financial stress indicators ahead of actual default events",
     ],
     tools: ["Python", "Scikit-learn", "Pandas", "Risk Scoring Models"],
-    links: { github: "#", report: "#", deck: "#" },
+    links: { github: "#",
+            report: "https://docs.google.com/document/d/1FbZHUib89i501r9xSG6BhBhiYOsj5saf/edit?usp=sharing&ouid=111975557227457565722&rtpof=true&sd=true", 
+            deck: "https://drive.google.com/file/d/1mNbNcxsnXcvu4DvAC5ovRqDOkeiAvMpn/view?usp=sharing" },
     tagline:
       "Portfolio intelligence framework analyzing 10,000 borrowers across 41 variables, with risk-based segmentation, acquisition channel optimization, and an Early Warning Alert System for sustainable lending growth.",
   },
@@ -257,7 +267,6 @@ export const projects: Project[] = [
     subdomain: "Financial Intelligence",
     mode: "Solo",
     verifiedBy: "Finance Club, IIT Roorkee",
-    artifactSrc: "/projects/cir/pred_vs_actual.png",
     artifactAlt:
       "Chart comparing CIR-model predicted vs. actual Treasury yields across 9-month and 1-year horizons",
     metrics: [
@@ -291,7 +300,7 @@ export const projects: Project[] = [
     keyInsight:
       "Standard maximum-likelihood calibration collapsed because short-rate persistence approached AR(1)=0.998. Cross-sectional calibration recovered economically meaningful parameters and significantly improved yield-curve reconstruction.",
     tools: ["Python", "NumPy", "SciPy", "Numerical Optimization", "Stochastic Calculus"],
-    links: { github: "#" },
+    links: { github: "https://github.com/arusurya/Stochastic_Interest_Rate_Modelling_and_Prediction" },
     tagline:
       "Implemented and calibrated the Cox–Ingersoll–Ross model from scratch to reconstruct Treasury yield curves, building a cross-sectional calibration framework that outperformed standard MLE on highly persistent short-rate data.",
   },
@@ -302,7 +311,7 @@ export const projects: Project[] = [
     subdomain: "GenAI Product Strategy",
     mode: "Solo",
     verifiedBy: "SocBiz, IIT Roorkee",
-    artifactSrc: "/projects/pochimu/pochimu-ui-frames.png",
+    
     artifactAlt:
       "Pochimu AI music companion prototype showing mood-based playlist recommendations",
     metrics: [
@@ -334,7 +343,8 @@ export const projects: Project[] = [
     keyInsight:
       "The next competitive moat may not be recommending better songs, but remembering meaningful moments. Persistent memory, emotional context, and conversational interaction create deeper engagement than recommendation quality alone.",
     tools: ["Product Strategy", "UX Flows", "Prototyping", "GenAI Design"],
-    links: { deck: "#", demo: "#" },
+    links: { deck: "https://drive.google.com/file/d/1fXoNmYC0aHxaJXfjoUJKhTvVSbpV5WJn/view?usp=sharing",
+             demo: "https://spotify-pochimu-app-jdcl.bolt.host/" },
     tagline:
       "Designed and prototyped Pochimu, an AI emotional music companion for Spotify combining memory, mood-awareness, and conversational AI to move music streaming beyond recommendation into companionship.",
   },
@@ -363,7 +373,7 @@ export const projects: Project[] = [
       "Delivered a phased adoption roadmap from pilot to scaled enterprise deployment",
     ],
     tools: ["Market Research", "Competitive Analysis", "GTM Strategy", "Positioning Frameworks"],
-    links: { deck: "#" },
+    links: { deck: "https://drive.google.com/file/d/1h46qWCPBU9QNCzkbEmA7o1w6Onm5wBrn/view?usp=sharing" },
     tagline:
       "Developed a go-to-market strategy for divAIne, an enterprise AI platform built around trust, memory continuity, and explainability, with a phased adoption roadmap for high-trust industries.",
   },
@@ -393,7 +403,7 @@ export const projects: Project[] = [
       "Delivered an expansion playbook of standardized processes for future store rollouts",
     ],
     tools: ["Procurement Strategy", "Financial Modeling", "Vendor KPI Design"],
-    links: { deck: "#" },
+    links: { deck: "https://drive.google.com/file/d/1XOwodaBeDBo6ak0GL278XOk6X2-ptGvH/view?usp=sharing" },
     tagline:
       "Designed a procurement and expansion strategy for Roastery Coffee House — a Procure-to-Pay framework, vendor governance system, and working-capital roadmap targeting a 5–10% reduction in operating costs.",
   },
@@ -422,7 +432,7 @@ export const projects: Project[] = [
       "Proposed a phased rollout: short-term promotions, medium-term loyalty and experience zones, long-term revenue intelligence tracking",
     ],
     tools: ["Customer Journey Mapping", "Segmentation", "Revenue Strategy"],
-    links: { deck: "#" },
+    links: { deck: "https://drive.google.com/file/d/1OLAU4Q4iigK13kr46awMZAe5H6QkcrWj/view?usp=sharing" },
     tagline:
       "Developed a revenue optimization strategy for urban food courts — customer journey mapping, conversion bottleneck analysis, and loyalty/promotional frameworks to lift spend, retention, and vendor performance.",
   },

@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
@@ -96,64 +95,37 @@ export default async function ProjectPage({
             </p>
           </header>
 
-          {/* ARTIFACT — leads before any further prose when a real one
-              exists. Otherwise a relationship graph (still real
-              structure, not decoration) fills the same visual slot. */}
-          {project.artifactSrc ? (
-            <div className="mt-10 max-w-5xl">
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[6px] border border-line bg-ink-soft md:aspect-[16/9]">
-                <Image
-                  src={project.artifactSrc}
-                  alt={project.artifactAlt ?? `${project.title} artifact`}
-                  fill
-                  className="object-cover object-top"
-                  priority
-                />
-              </div>
+          <div className="mt-10 max-w-5xl">
+                    <ProjectRelationGraph
+                              current={{
+                                        slug: project.slug,
+                                        title: project.title,
+                                        domain: project.domain.split(",")[0].trim(),
+                              }}
+                              related={getRelatedProjects(project, projects)}
+                    />
 
-              {project.metrics && project.metrics.length > 0 && (
-                <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 border-t border-line pt-5">
-                  {project.metrics.map((m) => (
-                    <div key={m.label}>
-                      <dd className="font-mono text-lg text-paper">
-                        {m.value}
-                      </dd>
-                      <dt className="text-[13px] text-muted">
-                        {m.label}
-                      </dt>
-                    </div>
-                  ))}
-                </dl>
-              )}
-            </div>
-          ) : (
-            <div className="mt-10 max-w-5xl">
-              <ProjectRelationGraph
-                current={{
-                  slug: project.slug,
-                  title: project.title,
-                  domain: project.domain.split(",")[0].trim(),
-                }}
-                related={getRelatedProjects(project, projects)}
-              />
+                    <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 border-t border-line pt-5">
+                              <div>
+                                        <dd className="font-mono text-lg text-paper">
+                                                  {project.stat.value}
+                                        </dd>
+                                        <dt className="text-[13px] text-muted">
+                                                  {project.stat.label}
+                                        </dt>
+                              </div>
 
-              <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 border-t border-line pt-5">
-                <div>
-                  <dd className="font-mono text-lg text-paper">
-                    {project.stat.value}
-                  </dd>
-                  <dt className="text-[13px] text-muted">{project.stat.label}</dt>
-                </div>
-                <div>
-                  <dd className="font-mono text-lg text-paper">
-                    {project.mode}
-                  </dd>
-                  <dt className="text-[13px] text-muted">project type</dt>
-                </div>
-              </dl>
-            </div>
-          )}
-
+                              <div>
+                                        <dd className="font-mono text-lg text-paper">
+                                                  {project.mode}
+                                        </dd>
+                                        <dt className="text-[13px] text-muted">
+                                                  project type
+                                        </dt>
+                              </div>
+                    </dl>
+          </div>                    
+          
           <div className="mt-14 grid gap-12 md:grid-cols-[1fr_280px] md:gap-16">
             <div className="space-y-12">
               <Block title="Problem">
@@ -226,6 +198,8 @@ export default async function ProjectPage({
 
               {(project.links.github ||
                 project.links.deck ||
+                project.links.dashboard ||
+                project.links.colab ||                
                 project.links.demo ||
                 project.links.report) && (
                 <div>
@@ -235,6 +209,12 @@ export default async function ProjectPage({
                   <div className="mt-3 flex flex-col gap-2">
                     {project.links.github && (
                       <LinkRow href={project.links.github} label="GitHub repository" />
+                    )}
+                    {project.links.dashboard && (
+                      <LinkRow href={project.links.dashboard} label="Dashboard" />
+                    )}
+                    {project.links.colab && (
+                      <LinkRow href={project.links.colab} label="Colab Notebook" />
                     )}
                     {project.links.report && (
                       <LinkRow href={project.links.report} label="Technical report" />

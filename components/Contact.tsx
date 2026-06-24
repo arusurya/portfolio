@@ -15,7 +15,7 @@ export default function Contact() {
             <p className="max-w-xl text-[15px] leading-relaxed text-muted md:text-base">
               I&apos;m currently open to internships and research collaborations in
               quantitative finance, applied analytics, or strategy consulting.
-              The fastest way to reach me is email — I read everything that
+              The fastest way to reach me is email ,I read everything that
               comes in.
             </p>
 

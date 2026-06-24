@@ -10,6 +10,7 @@ export const profile = {
   ],
   location: "Roorkee, Uttarakhand, India",
   email: "suryawanshiarya1107@gmail.com",
+  phone: "+91 9201707423",
   links: {
     github: "https://github.com/arusurya",
     linkedin: "https://www.linkedin.com/in/arya-suryawanshi-451816329/",
@@ -56,7 +57,7 @@ export const skillGroups = [
       "Product Strategy & Prototyping",
       "User Journey Mapping",
       "GenAI Product Design",
-      "Decision-Support Dashboards",
+      "Decision Support Dashboards",
     ],
   },
   {
@@ -67,7 +68,7 @@ export const skillGroups = [
 
 export const achievements = [
   {
-    title: "3rd Rank — Smart Campus Intelligence Challenge",
+    title: "3rd Rank:Smart Campus Intelligence Challenge",
     detail:
       "Placed 3rd among approximately 30+ participating teams; judges specifically recognized strong product thinking and real-world implementation feasibility.",
     tag: "Competition",

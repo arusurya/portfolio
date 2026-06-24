@@ -26,7 +26,6 @@ export type FeaturedProjectData = {
   domain: string;
   question: string; // the business question, one sentence
   description: string; // what you built, one to two sentences
-  artifactSrc: string; // REQUIRED — real screenshot, chart, or diagram
   artifactAlt: string;
   metrics: { value: string; label: string }[]; // 2 max, comparative not absolute
 };
@@ -46,7 +45,6 @@ export function FeaturedProject({
           className="group relative aspect-[4/3] w-full overflow-hidden rounded-[6px] border border-line bg-ink-soft"
         >
           <Image
-            src={project.artifactSrc}
             alt={project.artifactAlt}
             fill
             className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
