@@ -44,11 +44,7 @@ export function FeaturedProject({
           type="button"
           className="group relative aspect-[4/3] w-full overflow-hidden rounded-[6px] border border-line bg-ink-soft"
         >
-          <Image
-            alt={project.artifactAlt}
-            fill
-            className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-          />
+      
           <span className="absolute bottom-3 right-3 rounded-full bg-ink/80 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-paper opacity-0 transition-opacity group-hover:opacity-100">
             Expand
           </span>
