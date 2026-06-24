@@ -38,18 +38,7 @@ export function FeaturedProject({
   reversed?: boolean;
 }) {
   return (
-    <article className="grid items-center gap-10 py-16 md:grid-cols-2 md:gap-16 md:py-24">
-      <div className={reversed ? "md:order-2" : ""}>
-        <button
-          type="button"
-          className="group relative aspect-[4/3] w-full overflow-hidden rounded-[6px] border border-line bg-ink-soft"
-        >
-      
-          <span className="absolute bottom-3 right-3 rounded-full bg-ink/80 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-paper opacity-0 transition-opacity group-hover:opacity-100">
-            Expand
-          </span>
-        </button>
-      </div>
+    <article className="max-w-5xl py-16 md:py-24">
 
       <div className={reversed ? "md:order-1" : ""}>
         <p className="font-mono text-xs uppercase tracking-[0.12em] text-amber">
