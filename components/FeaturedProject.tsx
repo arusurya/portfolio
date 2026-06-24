@@ -36,7 +36,7 @@ export function FeaturedProject({
   project: FeaturedProjectData;
 }) {
   return (
-    <article className="max-w-4xl py-12 md:py-20">
+    <article className="max-w-3xl py-12 md:py-20">
 
       <div>
         <p className="font-mono text-xs uppercase tracking-[0.12em] text-amber">
