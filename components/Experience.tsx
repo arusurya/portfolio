@@ -13,36 +13,32 @@
 
 const roles = [
   {
-    title: "AI / ML Intern",
-    org: "Raymond Limited",
-    orgDetail: "Large-scale textile manufacturing",
-    period: "Internship",
+    title: "AI-ML Intern",
+    org: "Raymond Private Limited",
+    orgDetail: "Large-scale textile manufacturing industry",
+    period: "June 2026 - July 2026",
     domain: "Analytics · ML",
     bullets: [
-      "Worked with operational and departmental datasets to analyze resource utilization and demand patterns across business functions.",
-      "Assisted in developing predictive analytics solutions for forecasting departmental requirements and supporting planning decisions.",
-      "Performed data cleaning, transformation, and exploratory data analysis using Python, Pandas, and NumPy.",
-      "Evaluated machine learning approaches for demand forecasting and operational decision support.",
-      "Built analytical reports and visualizations to communicate trends, forecasts, and actionable insights.",
-      "Gained exposure to enterprise data management and decision-support workflows within a large-scale manufacturing environment.",
+      "Analyzed manufacturing operations data to uncover resource-utilization inefficiencies.",
+      "Built forecasting models for departmental demand planning.",
+      "Performed EDA and data cleaning using Python, Pandas and NumPy.",
+      "Delivered analytical reports for operational decision-making."
     ],
     stack: ["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Excel"],
   },
   {
     title: "Marketing & CSR Executive",
     org: "Cognizance, IIT Roorkee",
-    orgDetail: "Annual technical festival — 75,000+ participants",
-    period: "Leadership",
-    domain: "Strategy · Ops",
+    orgDetail: "Annual technical festival (75k footfall)",
+    period: "September 2024 - Present",
+    domain: "Strategy · Operations",
     bullets: [
-      "Conducted outreach and partnership discussions with 50+ organizations for sponsorship and collaboration opportunities.",
-      "Successfully negotiated and secured multiple brand partnerships for IIT Roorkee's annual technical festival.",
-      "Coordinated with sponsors, internal teams, and stakeholders to ensure timely execution of partnership deliverables.",
-      "Managed communication workflows and supported event operations for a festival attracting 75,000+ participants.",
-      "Mentored and coordinated junior team members during outreach and partnership activities.",
-      "Developed practical experience in stakeholder management, business communication, and strategic negotiations.",
+      "Led partnership outreach to 50+ organizations",
+      "Secured multiple sponsorship and brand collaborations.",
+      "Coordinated stakeholder delivery for a 75,000+ attendee festival.",
+      "Managed and mentored junior outreach members.",
     ],
-    stack: null,
+    stack: [ "leadership", "communication", "negotiation", "event operations", "strategy" ],
   },
 ];
 
