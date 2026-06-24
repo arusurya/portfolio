@@ -199,8 +199,8 @@ export default function Home() {
           </div>
 
           <div className="container-page divide-y divide-line">
-            {featured.map((p, i) => (
-              <FeaturedProject key={p.slug} project={p} reversed={i % 2 === 1} />
+            {featured.map((p) => (
+              <FeaturedProject key={p.slug} project={p} />
             ))}
           </div>
 

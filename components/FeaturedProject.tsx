@@ -32,15 +32,13 @@ export type FeaturedProjectData = {
 
 export function FeaturedProject({
   project,
-  reversed = false,
 }: {
   project: FeaturedProjectData;
-  reversed?: boolean;
 }) {
   return (
-    <article className="max-w-5xl py-16 md:py-24">
+    <article className="max-w-4xl py-12 md:py-20">
 
-      <div className={reversed ? "md:order-1" : ""}>
+      <div>
         <p className="font-mono text-xs uppercase tracking-[0.12em] text-amber">
           {project.domain}
         </p>
