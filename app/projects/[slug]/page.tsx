@@ -3,7 +3,6 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ProjectRelationGraph from "@/components/graph/ProjectRelationGraph";
 
 /**
  * PROJECT DETAIL PAGE — redesign notes
@@ -95,16 +94,7 @@ export default async function ProjectPage({
             </p>
           </header>
 
-          <div className="mt-10 max-w-5xl">
-                    <ProjectRelationGraph
-                              current={{
-                                        slug: project.slug,
-                                        title: project.title,
-                                        domain: project.domain.split(",")[0].trim(),
-                              }}
-                              related={getRelatedProjects(project, projects)}
-                    />
-
+          <div className="mt-6 max-w-5xl">
                     <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-3 border-t border-line pt-5">
                               <div>
                                         <dd className="font-mono text-lg text-paper">
